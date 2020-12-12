@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MOVIES</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		h1,h2,h3{
+			color:white;
+		}
+
+		* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+
+</style>
+{% load static %}
+</head>
+
+
+
+<body background="{% static '/images/qwerty.jpg' %}">
+	<div class="scrollmenu">
+		<a href="/index/">Home</a>
+		<a href="">Movies</a>
+		<a href="/about/">About Us</a>
+    <a href="/contact/">Contact Us</a>
+	</div>
+
+
+<h2>Movies</h2>
+<br>
+<div class="row">
+  <div class="column">
+  	<a href="/avengers/"><img src="{% static '/images/avengers.jpg' %}" width="70%" alt="Avengers"><br><h3>Avengers</h3></a>
+  </div>
+  <div class="column">
+    <a href="/avengers2/"><img src="{% static '/images/ultron.jpg' %}" width="70%" alt="Avengers: Age of Ultron"><br><h3>Avengers: Age of Ultron</h3></a>
+  </div>
+  <div class="column">
+    <a href="/avengers3/"><img src="{% static '/images/infinity.jpeg' %}" width="70%" alt="Avengers: Infinity War"><br><h3>Avengers: Infinity War</h3></a>
+  </div>
+  <div class="column">
+    <a href="/avengers4/"><img src="{% static '/images/endgame.jpg' %}" width="70%" alt="Avengers: Endgame"><br><h3>Avengers: Endgame</h3></a>
+  </div>
+  <div class="column">
+    <a href="/batman1/"><img src="{% static '/images/Batman_Begins.jpg' %}" width="70%" alt="Batman: Begins"><br><h3>Batman: Begins</h3></a>
+  </div>
+</div>
+<br><br><br>
+<div class="row">
+  <div class="column">
+    <a href="/batman2/"><img src="{% static '/images/knight.jpg' %}" width="70%" alt="Avengers"><br><h3>Batman: Dark Knight</h3></a>
+  </div>
+  <div class="column">
+    <a href="/batman3/"><img src="{% static '/images/rises.jpg' %}" width="70%" alt="Avengers: Age of Ultron"><br><h3>Batman: Dark Knight Rises</h3></a>
+  </div>
+  <div class="column">
+    <a href="/joker/"><img src="{% static '/images/joker.jpg' %}" width="70%" alt="Avengers: Infinity War"><br><h3>Joker</h3></a>
+  </div>
+  <div class="column">
+    <a href="/manofsteel/"><img src="{% static '/images/manofsteel.jpg' %}" width="70%" alt="Avengers: Endgame"><br><h3>Man of Steel</h3></a>
+  </div>
+
+  <div class="column">
+    <a href="/spiderman/"><img src="{% static '/images/spiderman.jpg' %}" width="70%" alt="Batman: Begins"><br><h3>Spiderman: Far from Home</h3></a>
+  </div>
+</div>
+
+  <br><br>
+  <hr size="30">
+  <h1>Upcoming Movies</h1>
+<br><br>
+<div class="row">
+  <div class="column">
+    <a href="/blackwidow/"><img src="{% static '/images/widow.jpg' %}" width="70%" alt="Avengers"><br><h3>Black Widow</h3></a>
+  </div>
+  <div class="column">
+    <a href="/morbius/"><img src="{% static '/images/morbius.jpg' %}" width="70%" alt="Avengers: Age of Ultron"><br><h3>Morbius</h3></a>
+  </div>
+  <div class="column">
+    <a href="/wonderwoman/"><img src="{% static '/images/wonder.jpg' %}" width="70%" alt="Avengers: Infinity War"><br><h3>Wonder Woman</h3></a>
+  </div>
+  <div class="column">
+    <a href="/birdsofprey/"><img src="{% static '/images/prey.jpg' %}" width="70%" alt="Avengers: Endgame"><br><h3>Birds of Prey</h3></a>
+  </div>
+</div>
+
+</body>
+</html>

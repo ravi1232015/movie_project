@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOKING FORM</title>
+        <style>
+        h1{
+            color: orangered;
+        }
+        h2{
+            color: white;
+        }
+        </style>
+        {% load static %}
+    </head>
+    <body background="{% static '/images/qwerty.jpg' %}" link="white" vlink="white">
+        <center><h1>BOOKING FORM</h1></center>
+        <h2><br><br>
+        <form method="POST" action="/book/">
+            {% csrf_token %}
+            <table border="1px" align="center" cellpadding="10px" cellspacing="0px">
+                <tr>
+                    <th>Movie_Name</th>
+                    <td><input type="text" name="Movie_name" id="id_Movie_name" value="{{MOVIE}}">
+                </td>
+                </tr>
+                <tr>
+                    <th>User_name</th>
+                    <td><input type="text" name="name" id="id_name" value=""></td>
+                </tr>
+                
+                <tr>
+                    <th>EMAIL</th>
+                    <td><input type="text" name="email" id="id_email" value=""></td>    
+                </tr>
+
+                <tr>
+                    <th>Phone No.</th>
+                    <td><input type="number" name="phone" id="id_phone" value=""></td>
+                </tr>
+                <tr>
+                    <th>No.of seat</th>
+                    <td><input type="number" name="enter your seat" id="id_seat" value="seat"></td>
+                </tr>
+
+                <tr>
+                    <th>Booking date</th>
+                    <td><input type="dob" name="dob" id="id_dob" value=""></td>
+                </tr>
+                
+                <tr>
+                    <th>Enter theatre name</th>
+                    <td><input list="theatres" name="theatre">
+                    <datalist id="theatres">
+                      <option value="PVR">
+                      <option value="INOX">
+                      <option value="CINEPOLIS">
+                      <option value="CARNIVAL CINEMA">
+                    </datalist></td>
+                </tr>    
+
+                <tr>
+                    <th>Time</th>
+                    <td><input list="time" name="time">
+                    <datalist id="time">
+                      <option value="9-12">
+                      <option value="12-15">
+                      <option value="15-18">
+                      <option value="18-21">
+                      <option value="21-24">
+                    </datalist></td>    
+            </table>
+            <button type="submit">SUBMIT</button>
+        </form></h2>
+        <br><br>
+        
+    </body>
+
+</html>
